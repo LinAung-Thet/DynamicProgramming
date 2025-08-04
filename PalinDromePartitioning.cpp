@@ -46,33 +46,33 @@ int main()
     string input;
     vector<vector<string>> results;
 
-    cout << "Test case 1" << endl;
-    input = "aab";
-    cout << "Expected : [[a a b][aa b]]" << endl;
-    results = solution.partition(input);
-    cout << "Result   : [";
-    for (auto result : results) {
-        cout << "[";
-        for (int i = 0; i < result.size(); ++i) {
-            cout << result[i] << (i == result.size() - 1 ? "" : " ");
-        }
-        cout << "]";
-    }
-    cout << "]" << endl << endl;
+    // cout << "Test case 1" << endl;
+    // input = "aab";
+    // cout << "Expected : [[a a b][aa b]]" << endl;
+    // results = solution.partition(input);
+    // cout << "Result   : [";
+    // for (auto result : results) {
+    //     cout << "[";
+    //     for (int i = 0; i < result.size(); ++i) {
+    //         cout << result[i] << (i == result.size() - 1 ? "" : " ");
+    //     }
+    //     cout << "]";
+    // }
+    // cout << "]" << endl << endl;
     
-    cout << "Test case 2" << endl;
-    input = "a";
-    cout << "Expected : [[a]]" << endl;
-    results = solution.partition(input);
-    cout << "Result   : [";
-    for (auto result : results) {
-        cout << "[";
-        for (int i = 0; i < result.size(); ++i) {
-            cout << result[i] << (i == result.size() - 1 ? "" : " ");
-        }
-        cout << "]";
-    }
-    cout << "]" << endl << endl;
+    // cout << "Test case 2" << endl;
+    // input = "a";
+    // cout << "Expected : [[a]]" << endl;
+    // results = solution.partition(input);
+    // cout << "Result   : [";
+    // for (auto result : results) {
+    //     cout << "[";
+    //     for (int i = 0; i < result.size(); ++i) {
+    //         cout << result[i] << (i == result.size() - 1 ? "" : " ");
+    //     }
+    //     cout << "]";
+    // }
+    // cout << "]" << endl << endl;
     
     cout << "Test case 3" << endl;
     input = "abbcd";
