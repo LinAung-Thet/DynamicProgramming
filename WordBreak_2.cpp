@@ -11,21 +11,18 @@ class Solution {
 public:
     vector<string> wordBreak(string s, vector<string>& wordDict) {
         unordered_set<string> dict(wordDict.begin(), wordDict.end());
-        unordered_map<string, vector<string>> memo;
-        return dfs(s, dict, memo);
+        return dfs(s, dict);
     }
 
 private:
-    vector<string> dfs(const string& s, unordered_set<string>& dict,
-                       unordered_map<string, vector<string>>& memo) {
-        if (memo.count(s)) return memo[s];
+    vector<string> dfs(const string& s, unordered_set<string>& dict) {
         if (s.empty()) return {""};
 
         vector<string> result;
         for (int i = 1; i <= s.size(); ++i) {
             string word = s.substr(0, i);
             if (dict.count(word)) {
-                vector<string> suffixes = dfs(s.substr(i), dict, memo);
+                vector<string> suffixes = dfs(s.substr(i), dict);
                 for (const string& suffix : suffixes) {
                     string sentence = word + (suffix.empty() ? "" : " " + suffix);
                     result.push_back(sentence);
@@ -33,7 +30,6 @@ private:
             }
         }
 
-        memo[s] = result;
         return result;
     }
 };
